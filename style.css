@@ -1,0 +1,152 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: url(neon\ grave.jpg);
+}
+#container {
+    width: 400px;
+    height: 400px;
+    padding: 0;
+    box-sizing: border-box;
+    background:transparent;
+}
+
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+#spooky {
+    margin: 10% auto;
+    width: 80%;
+    height: 80%;
+    animation: floaty 10s infinite;
+}
+
+#spooky #body {
+    position: relative;
+    margin: 50px auto 0;
+    width: 180px;
+    height: 220px;
+    background: #30033d;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    animation: floaty .10s infinite;
+}
+
+
+#spooky #body:before,
+#spooky #body:after {
+    content: '';
+    position: absolute;
+    top: 130px;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #deedff;
+    animation: floaty .7s infinite;
+}
+
+#spooky #body:before {
+    left: -18px;
+}
+
+#spooky #body:after {
+    right: -18px;
+}
+
+#spooky #body #eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 90px 0 0;
+    width: 90px;
+    height: 20px;
+    animation: floaty .10s infinite;
+}
+
+
+#spooky #body #eyes:before,
+#spooky #body #eyes:after {
+    content: ' ';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #f3f0f0;
+    border-radius: 50%;
+    animation: floaty .10s infinite;
+
+}
+
+#spooky #body #mouth {
+    background: #6c6e75;
+    margin: 25px auto 0;
+    width: 60px;
+    height: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#spooky #body #mouth:before {
+    content: ' ';
+    display: block;
+    background: #e8ebf1;
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+}
+
+#spooky #body #feet {
+    position: absolute;
+    display: flex;
+    bottom: -18px;
+    width: 180px;
+    height: 36px;
+    animation: floaty .2s infinite;
+}
+
+
+#spooky #body #feet > *,
+#spooky #body #feet::before,
+#spooky #body #feet::after {
+    content: ' ';
+    width: 36px;
+    height: 36px;
+    background-color: #eeeeee;
+    border-radius: 50%;
+}
+
+#shadow {
+    margin: -90px auto 0;
+    background: #b3b5bd;
+    width: 180px;
+    height: 40px;
+    border-radius: 50%;
+    animation: zoomy 5s infinite;
+}
+
+@keyframes floaty {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes zoomy {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+}
